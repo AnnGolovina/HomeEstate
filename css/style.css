@@ -1,0 +1,66 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	line-height: 1;
+	font-family: Manrope;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.page {
+	flex: 1 1 auto;
+}
+
+
+
+[class*="__container"] {
+	min-width: 1170px;
+	margin: 0 auto;
+}
+@media screen and (max-width: 1199.98px) {
+	[class*="__container"] {
+		max-width: 970px;
+	}
+}
+@media screen and (max-width: 990.98px) {
+	[class*="__container"] {
+		max-width: 750px;
+	}
+}
+@media screen and (max-width: 767.98px) {
+	[class*="__container"] {
+		max-width: none;
+		padding: 0 15px;
+	}
+}
