@@ -868,7 +868,7 @@ width: 100%;
 
 .simple-rating {
   position: absolute;
-  font-size: 40px;
+  font-size: 24px;
   display: inline-block;
 }
 
@@ -900,10 +900,107 @@ width: 100%;
   flex: 0 0 20%;
   height: 100%;
   cursor: pointer;
-  color: #fff;
+  color: rgba(233, 224, 180, 0.451);
+  
 }
 
-.
+.simple-rating__label::before {
+  content: "★";
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.simple-rating__item:checked, .simple-rating__item:checked ~ .simple-rating__label {
+  color: #FBB040;
+}
+.simple-rating__label.menu__link:hover,
+.simple-rating__label:hover ~ .simple-rating__label,
+.simple-rating__label:checked ~ .simple-rating__label:hover {
+  color: #e5bc7f;
+}
+
 /* ===================================================== */
+
+.reviews {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+@media (max-width: 990.98px) {
+  .reviews {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .reviews {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.reviews__container {}
+.reviews__title {
+  margin-bottom: 50px;
+  max-width: 570px;
+}
+
+.reviews__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px,380px));
+}
+.reviews__item {}
+
+.item-reviews {
+  color: inherit;
+  padding: 50px 40px;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+}
+
+.item-reviews:hover{
+  border: 1px solid transparent;
+  box-shadow: 3px 44px 54px 0px rgba(0, 0, 0, 0.08), 0px 1.85px 3.15px 0px rgba(0, 0, 0, 0.01), 0px 8.15px 6.52px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 38.52px 25.48px 0px rgba(0, 0, 0, 0.02), 0px 64.81px 46.85px 0px rgba(0, 0, 0, 0.02), 0px 100px 80px 0px rgba(0, 0, 0, 0.03);
+}
+.item-reviews__raiting {
+  margin-bottom: 33px;
+}
+.simple-rating {
+}
+
+.simple-rating__items {}
+.simple-rating__item {}
+.simple-rating__label {}
+
+.item-rexiews__text {
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+.item-reviews__author {}
+
+.author-item-reviews {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.author-item-reviews__avatar {
+  flex: 0 0 48px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.author-item-reviews__body {}
+.author-item-reviews__name {
+  font-weight: 700;
+  line-height: 22px;
+}
+.author-item-reviews__location {
+  color: #666666;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+/* ================================================================= */
 .footer {
 }
